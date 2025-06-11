@@ -1,0 +1,98 @@
+/* large view navigation ************************************/
+@media (min-width: 64.063em) {
+    /* HEADER */
+    #big-title{
+        font-size: xxx-large;
+    }
+    
+
+    /* HOME PAGE */
+    .phrase{
+        /* border: solid 1px var(--rose-color); */
+        top: 25%;
+        width: 45%;
+        margin-left: 4rem;
+        background-color: transparent;
+    }
+
+    .phrase p{
+		font-size: 180%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .phrase button{
+        font-size: large;
+        width: 200px;
+    }
+
+    .nav li{
+		min-width: 130px;
+	}
+
+    .nav ul{
+		width: 550px;
+    }
+
+    h1{
+        font-size: xxx-large;
+        width: 80%;
+        justify-self: center;
+        background-color: var(--green-color);
+        color: var(--white-color);
+    }
+
+    .quote{
+        font-size: x-large;
+        color: var(--white-color);
+        /* background-color: var(--papaya-color); */
+        font-weight: bold;
+        border: none;
+        border-left: 5px double var(--papaya-color);
+    }
+
+    .quote p{
+        padding-left: 3rem;
+    }
+
+    .quote-box{
+        background-color: var(--green-color);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-top: 4rem;
+    }
+
+    .about {
+        padding: 4rem;
+        font-size: large;
+        max-width: 1113px;
+        margin-top: 4rem;
+    }
+
+    .about h2{
+        text-align: center;
+        font-size: xx-large;
+        padding-bottom: 2rem;
+    }
+
+    .reviews{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .reviews h2{
+        padding-left: 4rem;
+    }
+
+    
+
+    /* CONTACT PAGE */
+    .contorno{
+        margin-top: 2rem;
+    }
+
+    #visit-section{
+        font-size: x-large;
+    }
+
+}

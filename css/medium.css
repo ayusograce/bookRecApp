@@ -1,0 +1,186 @@
+/* medium view navigation ************************************/
+@media (min-width: 40.063em) {
+	
+	/* PRIMERA PARTE DE LA PAGINA */
+	h1 {
+		font-size: 2rem;
+	}
+	
+	h2 {
+		font-size: 2rem;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	header {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0.5rem;
+	}
+
+	.nav {
+		display: flex;
+		margin: 0;
+		border-top: 0;
+	}
+
+	.nav a{
+		display: block;
+	}
+
+    .nav ul{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+		width: 400px;
+    }
+
+	.nav a:hover, button:hover{
+		border-radius: 999px;
+	}
+
+	.active{
+		border-radius: 999px;
+	}
+
+	/* FOOTER  OF THE PAGES */
+	footer{
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	footer div{
+		padding-right: 1rem;
+	}
+
+	.icon{
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+	
+
+	/* HOME PAGE */
+	.phrase{
+		width: 50%;
+		margin-left: 4rem;
+		top: 15%;
+		background-color: transparent;
+		padding-bottom: 1rem;
+		background-color: rgba(235, 233, 233, 0.329);
+	}
+
+	.phrase p{
+		font-size: 120%;
+		color: var(--brown-color);
+	}
+
+	.about{
+		width: 80%;
+	}
+
+	.month-book{
+		grid-template-areas: 
+		"title title"
+		"picture book"
+		"picture summary"
+		"picture boton"
+		;
+	}
+
+	.month-book h3{
+		text-align: left;
+		margin-left: 2rem;
+	}
+
+	.month-book p{
+		max-width: 700px;
+		margin-left: 2rem;
+		text-align: left ;
+	}
+
+	.month-book img{
+		padding: 2rem;
+	}
+
+	.reviews{
+		overflow: hidden;
+		display: grid;
+		grid-template-areas: 
+		"image title" 
+		"image button";
+		text-align: left;
+		margin-bottom: 2rem;
+	}
+
+	.reviews img{
+		position:static;
+		grid-area: image;
+		justify-self: center;
+	}
+
+	.reviews button{
+		grid-area: button;
+		justify-self: start;
+		padding: 1rem;
+		border: solid 1px var(--papaya-color);
+		margin-top: 4rem;
+	}
+
+	.reviews h2{
+		grid-area: title;
+		padding-top: 2rem;
+	}
+
+	.quote{
+		width: 60%;
+		font-size: large;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	form{
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	/* BOOKS AND REAVIEWS PAGE STYLING */
+	.booksyear div{
+		grid-template-areas: 
+		"imagen titulo titulo"
+		"imagen descripcion descripcion"
+		"imagen goodreads comprar"
+		;
+	}
+
+	.booksyear button#goodreads{
+		justify-self: end;
+	}
+	
+	.booksyear button#comprar{
+		justify-self: start;
+	}
+
+	/* CONTACT/JOIN PAGE */
+	.about ol{
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.about li{
+		padding-bottom: 1rem;
+	}
+
+	.contorno {
+		border: dashed 2px var(--rose-color);
+		/* padding-left: 2rem; */
+	}
+
+	#visit-section{
+		justify-self: center;
+	}
+
+}

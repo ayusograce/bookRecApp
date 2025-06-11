@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Next Book</title>
+    <meta name="description" content="The home page for My Next Book, a web application designed to provide book recommendations based on books the user already love and to provide a comfortable platform to connect with other book lovers. ">
+    <meta name="author" content="Grace Ayuso">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="public/images/icon.png">
+    <script type="module" src="js/main.js" defer></script>
+    <meta property="og:title" content="Home - My Next Book">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="https://ayusograce.github.io/bookRecomendator/index">
+</head>
+<body>
+    <header  id="main-header"></header>
+    <main class="all">
+        <div class="position">
+            <div class="hero">
+                <picture>
+                    <source srcset="public/images/hero-large.webp" media="(min-width: 1000px)">
+                    <source srcset="public/images/hero-medium.webp" media="(min-width: 500px)">
+                    <img src="public/images/hero-vertical.webp" alt="Books image" width="500" height="750">
+                </picture>
+            </div>
+            <div class="phrase">
+                <p>Find your next 5-star reading!</p>
+                <button>Start!</button>
+            </div>
+        </div>
+        <section class="hidden about">
+            <h2>A little about: <br>My Next Book</h2>
+            <p>My Next Book helps you find your next great read with smart recommendations based on books you already love. <br> 
+                Explore by genre, save your favorites, create custom book lists, or let the Blind Date Book surprise you. <br>
+                Connect with other readers and enjoy a smooth, responsive experience made for book lovers. </p>
+            <img src="public/images/reviews.webp" alt="Books open showing their pages" loading="lazy">
+            <p class="bold">The next big story is waiting for you!</p>
+        </section>
+        <section class="about hidden">
+            <h2>Enter your favorite book: </h2>
+            <form id="search-form">
+                <input type="search" id="search-input" placeholder="Enter a title..." required> <br>
+                <button type="submit">Search</button>
+            </form>
+            <div id="results"></div>
+        </section>
+        <section class="about newsletter hidden">
+            <h2>Create your account!</h2>
+            <form class="form">
+                <label>Name <input type="text" name="name" autocomplete="name" title="Your Name"></label>
+                <label>Email <input type="email" name="email" required placeholder="yourname@mail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Password <input type="password" name="password" required title="Your Password" autocomplete="password"></label>
+                <button id="subscribe" type="submit">Sign-up</button>
+            </form>
+            <dialog id="thank-you" class="modal">
+                <div class="modal-content">
+                  <p>Welcome to our comunity!</p>
+                  <p>Now you can save your favorite book to start your next reading.</p>
+                  <button id="closeModal">X</button>
+                </div>
+            </dialog>
+        </section>
+        <div class="quote-box"><div class="quote"></div></div>
+    </main>
+    <!-- AFTER THIS POINT MAINTAIN THE SAME -->
+    <footer id="main-footer"></footer>
+</body>
+</html>
