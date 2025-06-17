@@ -1,4 +1,4 @@
-import { bookCards } from "./Books.mjs";
+import { getBookDetails } from "./Books.mjs";
 import {loadHeaderFooter, observeHiddenElements, setupNavigation, insertCurrentYear,} from "./utils.mjs";
 import {getQuotesData} from "./quotes.mjs";
 
@@ -6,11 +6,9 @@ observeHiddenElements();
 
 setupNavigation();
 
-document.getElementById("search-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const query = document.getElementById("search-input").value.trim();
-    bookCards({query: query, IdContainer: "results", maxResults: 8});
-});
+const params = new URLSearchParams(window.location.search);
+const bookId = params.get('id');
+getBookDetails({id:bookId, containerId:"book-details"});
 
 getQuotesData("../public/json/quotes.json");
 

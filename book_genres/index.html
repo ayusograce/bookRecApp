@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Next Book - Search</title>
+    <meta name="description" content="The search by genre page for My Next Book, a web application designed to provide book recommendations based on books the user already love and to provide a comfortable platform to connect with other book lovers. ">
+    <meta name="author" content="Grace Ayuso">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="stylesheet" href="../css/large.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="../public/images/icon.png">
+    <script type="module" src="../js/genre.js" defer></script>
+    <meta property="og:title" content="Search by genre - My Next Book">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="https://ayusograce.github.io/bookRecomendator/index">
+</head>
+<body>
+    <header  id="main-header"></header>
+    <main class="all">
+        <!-- <div class="filling-space"></div> -->
+        <div class="quote-box"><div class="quote"></div></div>
+        <h1>Search by genre</h1>
+        <section class="about">
+            <h2>Choose your Favorite Genre</h2>
+            <div class="genres">
+                <button class="genre-type" data-genre="fiction">Fiction</button>
+                <button class="genre-type" data-genre="romance">Romance</button>
+                <button class="genre-type" data-genre="Fantasy">Fantasy</button>
+                <button class="genre-type" data-genre="history">History</button>
+                <button class="genre-type" data-genre="poetry">Poetry</button>
+                <button class="genre-type" data-genre="self-help">Self-help</button>
+                <button class="genre-type" data-genre="educational">Educational</button>
+            </div>
+            <h3>Results</h3>
+            <div id="genre-results" class="results"></div>
+        </section>
+
+        <section class="about hidden">
+            <h2>Enter your favorite book: </h2>
+            <form id="search-form">
+                <input type="search" id="search-input" placeholder="Enter a title..." required> <br>
+                <button type="submit">Search</button>
+            </form>
+            <div id="results" class="results"></div>
+        </section>
+        
+    </main>
+    <!-- AFTER THIS POINT MAINTAIN THE SAME -->
+    <footer id="main-footer"></footer>
+</body>
+</html>

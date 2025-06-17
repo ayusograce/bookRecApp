@@ -33,10 +33,10 @@
             </div>
             <div class="phrase">
                 <p>Find your next 5-star reading!</p>
-                <button>Start!</button>
+                <button onclick="window.location.href='#search-section'">Start!</button>
             </div>
         </div>
-        <section class="hidden about">
+        <section class="hidden about" id="about">
             <h2>A little about: <br>My Next Book</h2>
             <p>My Next Book helps you find your next great read with smart recommendations based on books you already love. <br> 
                 Explore by genre, save your favorites, create custom book lists, or let the Blind Date Book surprise you. <br>
@@ -44,13 +44,13 @@
             <img src="public/images/reviews.webp" alt="Books open showing their pages" loading="lazy">
             <p class="bold">The next big story is waiting for you!</p>
         </section>
-        <section class="about hidden">
+        <section class="about hidden" id="search-section">
             <h2>Enter your favorite book: </h2>
             <form id="search-form">
                 <input type="search" id="search-input" placeholder="Enter a title..." required> <br>
                 <button type="submit">Search</button>
             </form>
-            <div id="results"></div>
+            <div id="results" class="results"></div>
         </section>
         <section class="about newsletter hidden">
             <h2>Create your account!</h2>
