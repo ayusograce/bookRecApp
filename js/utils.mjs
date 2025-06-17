@@ -1,5 +1,4 @@
 
-
 // Function to add the show class to the sections and animate them
 export function observeHiddenElements() {
     const observer = new IntersectionObserver((entries) => {
