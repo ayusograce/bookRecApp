@@ -17,7 +17,7 @@ export async function bookCards({query, IdContainer, maxResults = 8}){
         const info = book.volumeInfo;
         return `
             <div class="card">
-            <a href="/bookRecApp/book_genres/book.html?id=${book.id}">
+            <a href="/book_genres/book.html?id=${book.id}">
                 <img src="${info.imageLinks?.thumbnail || 'https://via.placeholder.com/128x200?text=No+cover'}" alt="Cover of ${info.title}">
                 <h3>${info.title}</h3>
             </a>
