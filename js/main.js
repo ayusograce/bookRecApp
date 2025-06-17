@@ -16,6 +16,6 @@ getQuotesData("../public/json/quotes.json");
 
 insertCurrentYear();
 
-loadHeaderFooter();
+loadHeaderFooter("");
 
 
