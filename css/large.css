@@ -73,25 +73,4 @@
         font-size: xx-large;
         padding-bottom: 2rem;
     }
-
-    .reviews{
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
-
-    .reviews h2{
-        padding-left: 4rem;
-    }
-
-    
-
-    /* CONTACT PAGE */
-    .contorno{
-        margin-top: 2rem;
-    }
-
-    #visit-section{
-        font-size: x-large;
-    }
-
 }

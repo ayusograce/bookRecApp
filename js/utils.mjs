@@ -1,3 +1,11 @@
+import { logout } from "./User.mjs";
+
+// This function erase the user info of the localStorage
+export async function logoutButton(){
+  document.getElementById("logout-btn").addEventListener("click", () => {
+  logout();
+  window.location.href = "/";
+})};
 
 // Function to add the show class to the sections and animate them
 export function observeHiddenElements() {
@@ -37,15 +45,7 @@ export function insertCurrentYear(selector = "#currentyear") {
     }
 }
 
-// Last modified date
-export function insertLastModified(selector = "#lastModified") {
-    const date = document.querySelector(selector);
-    const lastModified = document.lastModified;
-    if (date) {
-      date.textContent = `Last modification: ${lastModified}`;
-    }
-}
-
+// Function to render an element with a template
 export function renderWithTemplate(templateFn, parentElement, callback, data) {
   parentElement.innerHTML = templateFn;
   if(callback) {
@@ -53,13 +53,14 @@ export function renderWithTemplate(templateFn, parentElement, callback, data) {
   }
 }
 
+// Function to load the template
 export async function loadTemplate(path){
   const res = await fetch(path);
   const template = await res.text();
   return template;
 }
 
-
+// Function to load dynamically the header and the footer
 export async function loadHeaderFooter(){
   const headerTemplate = await loadTemplate("../public/partials/header.html");
   const footerTemplate = await loadTemplate("../public/partials/footer.html");

@@ -1,4 +1,4 @@
-
+// Build the book cards with google books information
 export async function bookCards({query, IdContainer, maxResults = 8}){
     const resultsDiv = document.getElementById(IdContainer);
     resultsDiv.innerHTML = 'Searching books...';
@@ -31,7 +31,7 @@ export async function bookCards({query, IdContainer, maxResults = 8}){
     }
 }
 
-
+// This is for the book details page. It fetchs the info of the book with the previous id
 export async function getBookDetails({id, containerId}) {
     const container = document.getElementById(containerId);
     const apiKey = 'AIzaSyAZdb28IHLfE2YtRQFLGP8LTK4ivpDfMTY';
@@ -57,12 +57,15 @@ export async function getBookDetails({id, containerId}) {
             const rawGenre = info.categories?info.categories[0]:"fiction";
             const cleanGenre = rawGenre.toLowerCase().split("/")[0].trim().replace(/\s+/g, "_");
             getRecommendations({genre:cleanGenre, containerId:"recommended-books"});
+
+            return info;
         } catch (error){
         container.innerHTML = "<p>Error loading the page.</p>";
         console.error(error);
     }
 }
 
+// This loads the recommendations with OpenLibrary
 export async function getRecommendations({genre, containerId}) {
     const container = document.getElementById(containerId);
     try{
@@ -87,4 +90,37 @@ export async function getRecommendations({genre, containerId}) {
         container.innerHTML = `<p>Error loading related books.</p>`;
         console.error(error);
     }
+}
+
+// Picks a random book with the genre=fiction of the google books library
+export function blindDateBook(buttonId, containerId){
+    const apiKey = 'AIzaSyAZdb28IHLfE2YtRQFLGP8LTK4ivpDfMTY';
+    const dateButton = document.getElementById(buttonId);
+    const container = document.getElementById(containerId);
+    if(!dateButton || !container){
+        console.warn("Blind date button or container not found");
+        return
+    }
+    dateButton.addEventListener("click", async () =>{
+        container.innerHTML = "Picking a radom book for you!";
+        try{
+            const query = "fiction";
+            const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=40&langRestrict=en&key=${apiKey}`);
+            const data = await res.json();
+            if(!data.items || data.items.length === 0){
+                container.innerHTML = "Please try again";
+                return
+            }
+            const randomBook = data.items[Math.floor(Math.random()*data.items.length)];
+            const info = randomBook.volumeInfo;
+            container.innerHTML = `<h3>Your Book:</h3>
+        <img src="${info.imageLinks?.thumbnail || 'https://via.placeholder.com/128x200?text=No+cover'}" alt="Cover of ${info.title}">
+        <h4>${info.title}</h4>
+        <p><strong>Author:</strong> ${info.authors ? info.authors.join(', ') : 'Unknown'}</p>
+        <a href="/book_genres/book.html?id=${randomBook.id}">See Details</a>`;
+        } catch (error){
+            container.innerHTML = "Something went wrong. Please try again!";
+            console.error(error);
+        }
+    });
 }

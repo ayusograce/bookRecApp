@@ -82,59 +82,6 @@
 		width: 80%;
 	}
 
-	.month-book{
-		grid-template-areas: 
-		"title title"
-		"picture book"
-		"picture summary"
-		"picture boton"
-		;
-	}
-
-	.month-book h3{
-		text-align: left;
-		margin-left: 2rem;
-	}
-
-	.month-book p{
-		max-width: 700px;
-		margin-left: 2rem;
-		text-align: left ;
-	}
-
-	.month-book img{
-		padding: 2rem;
-	}
-
-	.reviews{
-		overflow: hidden;
-		display: grid;
-		grid-template-areas: 
-		"image title" 
-		"image button";
-		text-align: left;
-		margin-bottom: 2rem;
-	}
-
-	.reviews img{
-		position:static;
-		grid-area: image;
-		justify-self: center;
-	}
-
-	.reviews button{
-		grid-area: button;
-		justify-self: start;
-		padding: 1rem;
-		border: solid 1px var(--papaya-color);
-		margin-top: 4rem;
-	}
-
-	.reviews h2{
-		grid-area: title;
-		padding-top: 2rem;
-	}
-
 	.quote{
 		width: 60%;
 		font-size: large;
@@ -147,21 +94,8 @@
 		padding-right: 2rem;
 	}
 
-	/* BOOKS AND REAVIEWS PAGE STYLING */
-	.booksyear div{
-		grid-template-areas: 
-		"imagen titulo titulo"
-		"imagen descripcion descripcion"
-		"imagen goodreads comprar"
-		;
-	}
-
-	.booksyear button#goodreads{
-		justify-self: end;
-	}
-	
-	.booksyear button#comprar{
-		justify-self: start;
+	input[type=search]{
+		width: 400px; 
 	}
 
 	/* CONTACT/JOIN PAGE */
@@ -172,15 +106,6 @@
 
 	.about li{
 		padding-bottom: 1rem;
-	}
-
-	.contorno {
-		border: dashed 2px var(--rose-color);
-		/* padding-left: 2rem; */
-	}
-
-	#visit-section{
-		justify-self: center;
 	}
 
 }

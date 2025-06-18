@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Next Book - Book details</title>
-    <meta name="description" content="A individual book page for My Next Book, a web application designed to provide book recommendations based on books the user already love and to provide a comfortable platform to connect with other book lovers. ">
+    <title>My Next Book - Favorites</title>
+    <meta name="description" content="The account page for My Next Book, a web application designed to provide book recommendations based on books the user already love and to provide a comfortable platform to connect with other book lovers. ">
     <meta name="author" content="Grace Ayuso">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/small.css">
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="icon" href="../public/images/icon.png">
-    <script type="module" src="../js/book.js"></script>
+    <script type="module" src="../js/favorites.js"></script>
     <meta property="og:title" content="My Next Book">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
@@ -24,17 +24,10 @@
     <header  id="main-header"></header>
     <main class="all">
         <div class="quote-box"><div class="quote hidden"></div></div>
-        <h1>Book Details</h1>
-        <section class="about">
-            <div id="book-details"><h2>Loading...</h2></div>
-            <button id="save-fav" class="button-pearl">Save to favorites</button>
+        <h1>Favorites</h1>
+        <section class="about results" id="favorites">
+            <h2>My books:</h2>
         </section>
-
-        <div class="about center">
-            <h2>Recommendations</h2>
-            <section id="recommended-books" class="results"><h3>Loading recommendations...</h3></section>
-        </div>
-        
     </main>
     <!-- AFTER THIS POINT MAINTAIN THE SAME -->
     <footer id="main-footer"></footer>
