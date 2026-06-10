@@ -28,24 +28,28 @@
                 <picture>
                     <source srcset="public/images/hero-large.webp" media="(min-width: 1000px)">
                     <source srcset="public/images/hero-medium.webp" media="(min-width: 500px)">
-                    <img src="public/images/hero-vertical.webp" alt="Books image" width="500" height="750">
+                    <img src="public/images/hero-vertical.webp" alt="Books image">
                 </picture>
             </div>
             <div class="phrase">
-                <p>Find your next 5-star reading!</p>
+                <p>Find your next 5-star reading based on the books you love</p>
                 <button onclick="window.location.href='#search-section'">Start!</button>
             </div>
         </div>
         <div class="quote-box"><div class="quote hidden"></div></div>
-        <section class="about" id="about">
+
+        <!-- ABOUT SECTION -->
+        <!-- <section class="about" id="about">
             <h2>A little about: <br>My Next Book</h2>
             <p>My Next Book helps you find your next great read with smart recommendations based on books you already love. <br> 
                 Explore by genre, save your favorites, or let the Blind Date Book surprise you. <br>
                 Connect with other readers and enjoy a smooth, responsive experience made for book lovers. </p>
             <img src="public/images/reviews.webp" alt="Books open showing their pages" loading="lazy">
             <p class="bold">The next big story is waiting for you!</p>
-        </section>
-        <section class="about hidden" id="search-section">
+        </section> -->
+
+        <!-- SEARCH SECTION -->
+        <section class="about" id="search-section">
             <h2>Enter your favorite book: </h2>
             <form id="search-form">
                 <input type="search" id="search-input" placeholder="Enter a title..." required> <br>
@@ -53,7 +57,9 @@
             </form>
             <div id="results" class="results"></div>
         </section>
-        <section class="hidden about">
+
+        <!-- BLIND DATE SECTION -->
+        <section class="about">
             <h2>Blind date with a book!</h2>
             <button id="blind-date">Try it!</button>
             <div id="blind-date-result"></div>
